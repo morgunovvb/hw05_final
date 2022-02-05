@@ -7,7 +7,7 @@ from .forms import PostForm
 from .models import Group, Post, User, Follow
 from .utils import get_page_context
 
-@cache_page(1 * 20)
+@cache_page(1*20)
 def index(request):
     context = get_page_context(Post.objects.all(), request)
     return render(request, 'posts/index.html', context)
@@ -51,7 +51,7 @@ def post_detail(request, post_id):
 
 @login_required
 def post_create(request):
-    form =  PostForm(
+    form = PostForm(
         request.POST or None,
         request.FILES or None,
     )
