@@ -7,7 +7,7 @@
         <aside class="col-12 col-md-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              Дата публикации: {{ posts.pub_date|date:"d E Y" }} 
+              Дата публикации: {{ posts.created|date:"d E Y" }} 
             </li> 
             {% if posts.group %}
               <li class="list-group-item">
@@ -16,6 +16,7 @@
                   все записи группы
                 </a>
               </li>
+              {% endif %}
               <li class="list-group-item">
                 Автор: {{ posts.author.get_full_name }}
               </li>
@@ -32,7 +33,6 @@
               <img class="card-img my-2" src="{{ im.url }}">
               {% endthumbnail %}
               </li>
-            {% endif %}
           </ul>
         </aside>
         <article class="col-12 col-md-9">
