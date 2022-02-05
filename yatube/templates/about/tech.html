@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Технологии{% endblock %}
+{% block content %}
+{% comment %} Колонки с отступом сверху и снизу {% endcomment %}
+<div class="row">
+  <h1>Вот что я умею</h1>
+  {% comment %}
+    Боковой блок со списком технологий 
+    Займет всю ширину блока на мобильном
+    и 25% при размерах экрана ≥768px
+  {% endcomment %}
+  <aside class="col-12 col-md-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        Python
+      </li>
+      <li class="list-group-item">
+        Django
+      </li>
+    </ul>
+  </aside>
+  {% comment %}
+    Статья  
+    Займет всю ширину блока на мобильном
+    и 75% при размерах экрана ≥768px
+  {% endcomment %}
+  <article class="col-12 col-md-9">
+    <p>
+      Текст страницы "Технологии"
+      Hello, i am Vyacheslav Morgunov.
+      I'm a python backend developer.
+      I like: 👪 my family, 💻 my MacBook, 🚗 my car, 💵 fintech backend,
+      🐍 python code, and coding of course 💻. 
+      My Skills and Tools: Python, Django, Bash, Sql
+    </p>
+  </article>
+</div>
+{% endblock %}
