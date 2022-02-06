@@ -19,7 +19,7 @@ class GroupAdmin(admin.ModelAdmin):
 
 
 class CommentAdmin(admin.ModelAdmin):
-    list_display=('author',)
+    list_display = ('author',)
 
 
 admin.site.register(Post, PostAdmin)
